@@ -1,0 +1,286 @@
+*{ 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Work Sans", sans-serif; /* Specify the font-family */
+}
+
+body {
+    width: 100%;
+    background-color: #3B3B3B;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #080808;
+    padding: 8px 3px;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    margin: 30px;
+    font-weight: bold;
+}
+
+input {
+    border-radius: 50px;
+    border: 1px solid #fff;
+    background-color: #3B3B3B;
+    padding: 8px 15px;
+}
+
+.searchBar {
+    position: relative;
+    display: inline-block; /* Ensures that the input and image are on the same line */
+    margin-right: -80px;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 8px; /* Adjust this value to your preference */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; /* Adjust this value according to the size of your icon */
+    height: auto;
+}
+
+input[type="text"] {
+    padding-left: 30px; /* Ensure enough padding to accommodate the icon */
+}
+
+.container {
+    position: relative; /* Set the container position to relative */
+    overflow: hidden; /* Ensure image doesn't overflow the container */
+}
+
+.container img {
+    width: 100%; /* Set the width of the image to 100% of the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Make sure the image is displayed as a block element */
+    margin-right: 20px; /* Adjust spacing between image and content */
+}
+
+.content {
+    position: absolute; /* Position the content absolutely within the container */
+    top: 0; /* Position the content at the top */
+    left: 0; /* Position the content on the left side */
+    width: 23%; /* Set the width of the content to 50% of the container */
+    height: 100%; /* Set the height of the content to 100% of the container */
+    background: linear-gradient(135.15deg, rgba(24, 22, 22, 0.15) 13.21%, rgba(11, 11, 11, 0.1) 86.76%);
+    padding: 10px;
+    text-align: center;
+    color: white; /* Set the text color */
+    box-sizing: border-box; /* Include padding and border in the content's total width and height */
+    backdrop-filter: blur(8px); /* Apply a blur effect to the background */
+}
+
+.content h1 {
+    margin-top: 10px;
+    font-weight: 900;
+    line-height: 40px;
+}
+
+.content h2 {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.content p {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.playButton {
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.playButton button {
+    position: relative;
+    padding: 12px 20px;
+    padding-left: 40px;
+    border-radius: 50px; /* Set border radius to 50px */
+    background-color: #000; /* Set background color to white */
+    color: #fff; /* Set text color to black */
+    border: 2px solid rgb(192, 52, 52);
+    outline: none; /* Remove outline */
+    cursor: pointer; /* Set cursor to pointer */
+}
+
+.playButton button img {
+    position: absolute;
+    top: 50%;
+    left: 15px; /* Adjust the left position according to your needs */
+    transform: translateY(-50%);
+    width: auto; /* Let the width adjust automatically */
+    height: 50%; /* Set the height to 100% of button height */
+    max-width: 100%; /* Limit image width to 100% of button width */
+    max-height: 100%; /* Limit image height to 100% of button height */
+}
+
+.container-1 {
+    margin: 10px 20px;
+}
+
+.container-1 h2 {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #fff;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7%;
+    position: relative; /* Add relative positioning to the container */
+}
+.grid-container article {
+    border: 1px solid #ccc;
+    position: relative; /* Add relative positioning to the article */
+}
+.grid-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.grid-container .overlay-jujutsu {
+    position: absolute;
+    bottom: 0; /* Align at the bottom */
+    left: 0; /* Align at the left */
+    max-width: 30%; /* Adjust the maximum width of the overlay image */
+    max-height: 30%; /* Adjust the maximum height of the overlay image */
+}
+.grid-container .overlay-onepiece {
+    position: absolute;
+    bottom: 0; /* Align at the bottom */
+    right: 0; /* Align at the right */
+    max-width: 30%; /* Adjust the maximum width of the overlay image */
+    max-height: 18%; /* Adjust the maximum height of the overlay image */
+}
+
+main{
+    margin-bottom: 10%;
+}
+
+footer {
+    background-color: #080808; /* Background color */
+    color: #fff; /* Text color */
+    padding: 20px; /* Padding for better spacing */
+    text-align: center; /* Center the text */
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+
+ /* Media query for small screens (phones) */
+@media screen and (min-width: 1500px) {
+    body {
+      width: 120%;
+    }
+  }
+  
+  @media screen and (min-width: 1800px) {
+    body {
+      width: 140%;
+    }
+  }
+  
+  @media screen and (max-width: 1122px) {
+    .content {
+      width: 40%;
+    }
+  }
+  
+  @media screen and (max-width: 1070px) {
+    .content {
+      width: 60%;
+    }
+    
+    .content p,
+    .playButton {
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .content {
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .container img {
+      height: 300px;
+    }
+  
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  
+    main {
+      margin-bottom: 20%;
+    }
+  }
+  
+  @media screen and (max-width: 850px) {
+    .searchBar input {
+      display: none;
+    }
+  
+    .searchIcon {
+      width: 25px;
+    }
+  }
+  
+  @media screen and (max-width: 720px) {
+    nav ul li a {
+      margin: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 670px) {
+    nav ul li a {
+      margin: 5px;
+    }
+  }
+  
+  @media screen and (max-width: 590px) {
+    nav ul .list {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    nav ul {
+      display: none;
+    }
+  
+    main {
+      margin-bottom: 30%;
+    }
+  }
+  
