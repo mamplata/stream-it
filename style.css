@@ -74,17 +74,16 @@ input[type="text"] {
 }
 
 .content {
-    position: absolute; /* Position the content absolutely within the container */
-    top: 0; /* Position the content at the top */
-    left: 0; /* Position the content on the left side */
-    width: 23%; /* Set the width of the content to 50% of the container */
-    height: 100%; /* Set the height of the content to 100% of the container */
-    background: linear-gradient(135.15deg, rgba(24, 22, 22, 0.15) 13.21%, rgba(11, 11, 11, 0.1) 86.76%);
-    padding: 10px;
-    text-align: center;
-    color: white; /* Set the text color */
-    box-sizing: border-box; /* Include padding and border in the content's total width and height */
-    backdrop-filter: blur(8px); /* Apply a blur effect to the background */
+  position: absolute; /* Position the content absolutely within the container */
+  top: 0; /* Position the content at the top */
+  left: 0; /* Position the content on the left side */
+  width: 23%; /* Set the width of the content to 50% of the container */
+  height: 100%; /* Set the height of the content to 100% of the container */
+  background: linear-gradient(135.15deg, rgba(0, 0, 0, 0.6) 13.21%, rgba(0, 0, 0, 0.8) 86.76%);
+  padding: 10px;
+  text-align: center;
+  color: white; /* Set the text color */
+  box-sizing: border-box; /* Include padding and border in the content's total width and height */
 }
 
 .content h1 {
