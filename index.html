@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header with logo, search bar and navigations -->
     <header>
         <h1><i>Stream-IT</i></h1>
         <div class="searchBar">
@@ -17,11 +18,14 @@
             <ul>
                 <li class="list"><a href="">Sign up</a></li>
                 <li><a href="">Login</a></li>
-                <li class="list"><a href="">Learn More</a></li>
+                <li><a href="">Learn More</a></li>
             </ul>
         </nav>
+        <img class="menu" src="img/menu.png" alt="Menu">
     </header>
+    <!-- Main content section -->
     <main>
+        <!-- Container for the first image section -->
         <section class="container">
             <img class="header_image" src="img/slime.png" alt="Tensura Slime">
             <div class="content">
@@ -39,17 +43,50 @@
                 </div>                
             </div>
         </section>
+        <!-- Container for the two column anime recents section-->
         <section class="container-1">
             <h2>Recently Added Animes</h2>
             <div class="grid-container">
                 <article>
-                    <img src="img/jujutsu.png" alt="Jujutsu Kaisen">
+                    <img src="img/jujutsu.png" alt="Jujutsu Kaisen" class="anime_title">
                     <img src="img/jujutsuname.png" alt="Jujutsu Kaisen Name" class="overlay-jujutsu">
+                    <img src="img/playIcon.png" alt="Jujutsu Kaisen Name" class="center_play">
+                    <div class="dark-overlay"></div>
                 </article>
                 <article>
-                    <img src="img/onepiece.png" alt="One Piece">
+                    <img src="img/onepiece.png" alt="One Piece" class="anime_title">
                     <img src="img/onepiecename.png" alt="One Piece Name" class="overlay-onepiece">
+                    <img src="img/playIcon.png" alt="Jujutsu Kaisen Name" class="center_play">
+                    <div class="dark-overlay"></div>
                 </article>
+            </div>
+        </section>
+        <!-- Container for the 3 two column layouts with fantasy, romance and slice of life-->
+        <section class="container-2 item1">
+            <div class="left-column">
+                <h1>Anime Fantasy</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus eros eget ipsum sagittis, eget viverra sapien mattis. Nam ac augue vel libero bibendum placerat. Nullam at turpis vitae ex dictum hendrerit eu vitae magna. Cras interdum vestibulum metus, sit amet cursus libero scelerisque in. Nulla facilisi. In hac habitasse platea dictumst. Vivamus tempus convallis massa a pharetra. Nulla facilisi. Duis ut ex ullamcorper, tristique justo in, mollis quam. Nulla facilisi.</p>
+            </div>
+            <div class="right-column">
+                <img src="img/fantasy.jpg" alt="Anime Fantasy">
+            </div>
+        </section>
+        <section class="container-2 item2">
+            <div class="right-column">
+                <img src="img/romance.jpg" alt="Anime Romance">
+            </div>
+            <div class="left-column">
+                <h1>Anime Romance</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus eros eget ipsum sagittis, eget viverra sapien mattis. Nam ac augue vel libero bibendum placerat. Nullam at turpis vitae ex dictum hendrerit eu vitae magna. Cras interdum vestibulum metus, sit amet cursus libero scelerisque in. Nulla facilisi. In hac habitasse platea dictumst. Vivamus tempus convallis massa a pharetra. Nulla facilisi. Duis ut ex ullamcorper, tristique justo in, mollis quam. Nulla facilisi.</p>
+            </div>
+        </section>
+        <section class="container-2 item3">
+            <div class="left-column">
+                <h1>Anime Slice of Life</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus eros eget ipsum sagittis, eget viverra sapien mattis. Nam ac augue vel libero bibendum placerat. Nullam at turpis vitae ex dictum hendrerit eu vitae magna. Cras interdum vestibulum metus, sit amet cursus libero scelerisque in. Nulla facilisi. In hac habitasse platea dictumst. Vivamus tempus convallis massa a pharetra. Nulla facilisi. Duis ut ex ullamcorper, tristique justo in, mollis quam. Nulla facilisi.</p>
+            </div>
+            <div class="right-column">
+                <img src="img/sliceoflife.jpg" alt="Anime Slice of Life">
             </div>
         </section>
     </main> 
