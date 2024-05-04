@@ -27,7 +27,6 @@
     <main>
         <!-- Container for the first image section -->
         <section class="container">
-            <img class="header_image" src="img/slime.png" alt="Tensura Slime">
             <div class="content">
                 <h1>Tensei Shitara <br> 
                     Slime Data Ken</h1>
@@ -42,6 +41,29 @@
                     <button>Watch Now <img src="img/play.png" alt="Play Button"></button>
                 </div>                
             </div>
+            <!-- for slide animation -->
+            <div class="slider-container">
+                <div class="slider">
+                  <input type="radio" name="slide-toggle" id="slide1" checked>
+                  <input type="radio" name="slide-toggle" id="slide2">
+                  <input type="radio" name="slide-toggle" id="slide3">
+                  <input type="radio" name="slide-toggle" id="slide4">
+              
+                  <div class="slides">
+                    <img class="slide" src="img/slime1.png" alt="Image 1">
+                    <img class="slide" src="img/slime2.jpg" alt="Image 2">
+                    <img class="slide" src="img/slime3.png" alt="Image 3">
+                    <img class="slide" src="img/slime4.png" alt="Image 4">
+                  </div>
+              
+                  <div class="slide-controller">
+                    <label for="slide1" class="slide-label slide1"></label>
+                    <label for="slide2" class="slide-label slide2"></label>
+                    <label for="slide3" class="slide-label slide3"></label>
+                    <label for="slide4" class="slide-label slide4"></label>
+                  </div>
+                </div>
+              </div>
         </section>
         <!-- Container for the two column anime recents section-->
         <section class="container-1">

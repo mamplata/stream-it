@@ -33,7 +33,9 @@ nav ul li a {
   color: #f3f1e2;
   margin: 30px;
   font-weight: bold;
-  padding: 5px 10px;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-weight: 600;
   transition: ease-in-out 0.2s;
 }
 
@@ -76,13 +78,69 @@ input[type="text"] {
 .container {
   position: relative; /* Set the container position to relative */
   overflow: hidden; /* Ensure image doesn't overflow the container */
+  z-index: 1;
 }
 
 .container img {
   width: 100%; /* Set the width of the image to 100% of the container */
   height: auto; /* Maintain aspect ratio */
   display: block; /* Make sure the image is displayed as a block element */
-  margin-right: 20px; /* Adjust spacing between image and content */
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+}
+
+.slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  max-inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 3/1;
+  object-fit: cover;
+}
+
+input[name="slide-toggle"] {
+  display: none;
+}
+
+.slide-controller {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);  
+}
+
+.slide-label {
+  cursor: pointer;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: gray;
+  border-radius: 50%;
+  margin: 0 5px;
+  z-index: 10;
+}
+
+#slide1:checked ~ .slides { transform: translateX(0); }
+#slide2:checked ~ .slides { transform: translateX(-100%); }
+#slide3:checked ~ .slides { transform: translateX(-200%); }
+#slide4:checked ~ .slides { transform: translateX(-300%); }
+
+#slide1:checked ~ .slide-controller .slide1,
+#slide2:checked ~ .slide-controller .slide2,
+#slide3:checked ~ .slide-controller .slide3,
+#slide4:checked ~ .slide-controller .slide4 {
+  background-color: white;
 }
 
 .content {
@@ -96,6 +154,7 @@ input[type="text"] {
   text-align: center;
   color: #f3f1e2; /* Set the text color */
   box-sizing: border-box; /* Include padding and border in the content's total width and height */
+  z-index: 1;
 }
 
 .content h1 {
@@ -293,10 +352,40 @@ footer {
   width: 100%;
 }
 
+.slides {
+  display: flex;
+  animation: slide-animation 27s infinite; /* Change slide every 9 seconds (3 slides) */
+}
+
 @media screen and (max-width: 1122px) {
   .content {
     width: 40%;
   }
+}
+
+/* Default positioning for wide screens */
+@media screen and (max-width: 920px) {
+  .slide-controller {
+    display: none;
+  }
+
+  .slides {
+    display: flex;
+    animation: slide-animation 9s infinite; /* Change slide every 9 seconds (3 slides) */
+}
+
+@keyframes slide-animation {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    33.333% {
+        transform: translateX(-100%);
+    }
+    66.666% {
+        transform: translateX(-200%);
+    }
+}
+
 }
 
 @media screen and (max-width: 920px) {
